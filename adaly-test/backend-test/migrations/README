@@ -1,0 +1,41 @@
+# Alembic Migrations
+
+This directory contains database migration files for the Library API.
+
+## Creating a Migration
+
+To create a new migration:
+
+```bash
+# Auto-generate from model changes
+alembic revision --autogenerate -m "description of changes"
+
+# Or create an empty migration
+alembic revision -m "description of changes"
+```
+
+## Running Migrations
+
+To apply migrations:
+
+```bash
+# Apply all pending migrations
+alembic upgrade head
+
+# Apply specific migration
+alembic upgrade 
+
+# Revert to a specific migration
+alembic downgrade 
+
+# Revert last migration
+alembic downgrade -1
+```
+
+## Migration History
+
+To see migration history:
+
+```bash
+alembic history
+```
